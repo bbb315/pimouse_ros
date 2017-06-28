@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #encoding: utf8
-import rospy, unittest, rostest
+import rospy, unittest, rostest, actionlib
 import rosnode
 import time
 from std_msgs.msg import UInt16
@@ -48,6 +48,7 @@ class BuzzerTest(unittest.TestCase):
 		with open("/dev/rtbuzzer0","r") as f:
 			data = f.readline()
 			self.device_values.append(int(data.rstrip()))
+
 if __name__ == '__main__':
 	time.sleep(3)
 	rospy.init_node('travis_test_buzzer')
