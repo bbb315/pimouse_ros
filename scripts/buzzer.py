@@ -42,3 +42,4 @@ if __name__ == '__main__':
 	music.start()
 	rospy.on_shutdown(write_freq)
 	rospy.spin()
+
